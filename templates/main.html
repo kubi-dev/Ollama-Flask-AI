@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Witaj w chatbotcie!</h1>
+        {% block content %}
+        <form action="{{ url_for('anwser') }}" method="post" class="load_form">
+            <div>
+                <div class="form__inputs">
+                    <label for="title">
+                        <input class="load_form" type="text" name="text" id="text" placeholder="Co chcesz zapytać?" required>
+                    </label>
+                </div>
+                <button class="form__button">Zapyaj</button>
+            </div>
+        </form>
+        {% endblock %}
+</body>
+</html>

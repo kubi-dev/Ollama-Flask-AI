@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Odpowiedź</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% block content %}
+    <div class="chat-bubble-container">
+        <h1 class="chat-message">{{ anwser }}</h1> </div>
+    {% endblock %}
+    <a href="/">Wróć do menu!</a>
+</body>
+</html>

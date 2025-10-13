@@ -1,0 +1,193 @@
+/* General Body Styles - Dark Mode (bez zmian) */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Ciemne tło */
+    color: #e0e0e0; /* Jasny kolor tekstu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Header Styles - Dark Mode (bez zmian) */
+h1 {
+    color: #8bbcdc; /* Jasnoniebieski dla wyróżnienia nagłówków */
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Form Container Styles - Dark Mode (bez zmian) */
+.load_form {
+    background-color: #2b2b2b; /* Ciemniejszy odcień tła dla formularza */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ciemniejszy cień */
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centruje elementy w formie wzdłuż osi X */
+}
+
+/* ZMIANA TUTAJ: Wyśrodkowanie pola input */
+.form__inputs {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex; /* Użyj Flexboxa */
+    justify-content: center; /* Wyśrodkuj zawartość (label z inputem) */
+    align-items: center; /* Wyśrodkuj pionowo (jeśli byłoby więcej elementów) */
+}
+
+/* Input Field Styles - Dark Mode (drobna modyfikacja szerokości, żeby nie było calc) */
+.load_form input[type="text"] {
+    width: 90%; /* Zamiast calc, użyjemy % i to Flexbox zajmie się centrowaniem */
+    max-width: 400px; /* Dodatkowy limit szerokości inputa */
+    padding: 12px 10px;
+    border: 1px solid #444; /* Ciemniejsza ramka */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: #3a3a3a; /* Ciemne tło pola input */
+    color: #e0e0e0; /* Jasny tekst w input */
+    transition: border-color 0.3s ease;
+}
+
+.load_form input[type="text"]::placeholder {
+    color: #888; /* Ciemniejszy placeholder */
+}
+
+.load_form input[type="text"]:focus {
+    border-color: #8bbcdc; /* Jasnoniebieska ramka przy focusie */
+    outline: none;
+    box-shadow: 0 0 5px rgba(139, 188, 220, 0.3);
+}
+
+/* Button Styles - Dark Mode (bez zmian) */
+.form__button {
+    background-color: #28a745; /* Zielony dla przycisku akcji */
+    color: white; /* Biały tekst */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    align-self: center; /* Zmieniamy na center, żeby przycisk też był wyśrodkowany */
+}
+
+.form__button:hover {
+    background-color: #218838; /* Ciemniejszy zielony */
+    transform: translateY(-2px);
+}
+
+.form__button:active {
+    transform: translateY(0);
+}
+
+/* Chat Bubble Container - Dark Mode (dla strony odpowiedzi, bez zmian) */
+.chat-bubble-container {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Centrowanie kontenera dymka */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Chat Bubble Styles - Dark Mode (bez zmian) */
+h1.chat-message {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-align: left;
+
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+    padding: 12px 18px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    max-width: 90%;
+}
+
+/* Speech bubble tail - Dark Mode (z prawej strony, bez zmian) */
+h1.chat-message::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -7px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: #3d3d3d;
+    border-bottom-color: #3d3d3d;
+    border-top-left-radius: 5px;
+    transform: rotate(45deg);
+}
+
+/* Link Styles - Dark Mode (bez zmian) */
+a {
+    color: #28a745;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    background-color: #218838;
+    color: white;
+    transform: translateY(-2px);
+}
+
+a:active {
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments (Dark Mode) - drobna modyfikacja dla h1 */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em; /* Zmniejszamy rozmiar nagłówka głównego na mniejszych ekranach */
+    }
+
+    .load_form {
+        padding: 20px;
+    }
+
+    .form__button {
+        width: 100%;
+        align-self: center;
+    }
+
+    .chat-bubble-container {
+        margin-bottom: 20px;
+    }
+
+    h1.chat-message {
+        font-size: 1em;
+        padding: 10px 15px;
+        max-width: 95%;
+    }
+
+    h1.chat-message::after {
+        right: -5px;
+    }
+
+    a {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}
