@@ -3,6 +3,7 @@ from ollama import ChatResponse
 from flask import Flask, render_template,request, redirect
 
 app = Flask(__name__)
+# You need ollama running for this function
 def chatbot_ollama(pytanie):
     response: ChatResponse = chat(model='deepseek-r1:8b', messages=[
       {
