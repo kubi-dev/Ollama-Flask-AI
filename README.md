@@ -17,9 +17,8 @@ To run this project, you need the following:
 1.  **Install Ollama** according to the instructions on the official website.
 2.  **Pull the model** by running the following command in your terminal:
     ```bash
-    ollama pull deepseek-coder:6.7b-instruct
+    ollama pull deepseek-r1:8b
     ```
-    *(Note: Based on the requested model name `deepseek-r1:8b`, the correct Ollama model tag is likely `deepseek-coder:6.7b-instruct` or similar. Please verify the exact tag if different.)*
 
 -----
 
